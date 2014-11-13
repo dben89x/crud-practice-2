@@ -1,0 +1,16 @@
+<%= form_for @update do |f| %>
+
+<%= render '/errors', model: @update %>
+
+<%= f.label :status %>
+<%= f.text_area :status %><br><br>
+
+<%= f.label :user %>
+<%= f.text_field :user %><br><br>
+
+<%= f.label :likes %>
+<%= f.number_field :likes %><br><br>
+
+<%= f.submit %>
+
+<% end %>

@@ -1,0 +1,39 @@
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
+<h1>
+  Status Updates
+</h1>
+  <%= link_to 'New Update', new_update_path %>
+
+<table class = 'table'>
+  <thead>
+    <tr>
+      <th>
+        <h2>Status:</h2>
+      </th>
+      <th>
+        <h2>User:</h2>
+      </th>
+      <th>
+        <h2>Likes:</h2>
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @updates.each do |update| %>
+      <tr>
+        <td>
+          <%= link_to update.status, update_path(update) %>
+        </td>
+        <td>
+          <%= update.user %>
+        </td>
+        <td>
+          <%= update.likes %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

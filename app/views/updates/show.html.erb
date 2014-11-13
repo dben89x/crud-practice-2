@@ -1,0 +1,11 @@
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
+
+<h1> <%= @update.status %> </h1>
+<%= @update.user %><br><br>
+<%= @update.likes %><br><br>
+<%= link_to 'Delete', update_path, method: :delete, :confirm => 'Are you sure?' %>
+<%= link_to 'Edit', edit_update_path %>
+
+<%= link_to 'Back', updates_path %>
